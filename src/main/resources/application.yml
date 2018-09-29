@@ -1,0 +1,21 @@
+# 环境变量
+
+ftp:
+  username: ftpuser
+  passwd: ftp2018
+  path: 172.18.18.19:21
+  options: readLock=rename&delay=10s&binary=true&filter=#zipFileFilter&delete=true&recursive=true
+  # 本地下载目录
+  url: ftp://${ftp.username}@${ftp.path}/?password=${ftp.passwd}&${ftp.options}
+  local-dir: /var/data
+
+# 后台运行进程
+camel:
+  springboot:
+    main-run-controller: true
+
+management:
+  endpoint:
+    camelroutes:
+      enabled: true
+      read-only: true
