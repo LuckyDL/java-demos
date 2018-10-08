@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * ftp zip文件过滤器
+ *
+ * @author LuckyDL
+ * @date 2018.10.08
  */
 @Component
 public class ZipFileFilter implements GenericFileFilter {

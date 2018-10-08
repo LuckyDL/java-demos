@@ -9,6 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * camel-ftp 路由配置
+ *
+ * @author LuckyDL
+ * @date 2018.10.08
+ */
 @Component
 public class DownloadRoute extends RouteBuilder {
     /**

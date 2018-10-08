@@ -13,6 +13,12 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
+/**
+ * camel-ftp数据处理器
+ *
+ * @author LuckyDL
+ * @date 2018.10.08
+ */
 @Component
 public class DataProcessor implements Processor {
 
@@ -30,6 +36,8 @@ public class DataProcessor implements Processor {
         String fileName = inFileMessage.getGenericFile().getFileName();
         String filePath = fileDir + '/' + fileName;
         readZip(filePath);
+
+        // 清除下载到本地的文件
         deleteFile(filePath);
     }
 
